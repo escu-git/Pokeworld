@@ -1,0 +1,18 @@
+@include mediaQuery-phone{
+
+}
+
+@include mediaQuery-tablet{
+    .pokeCard{
+        width:100px;
+        height:100px;
+        border:1px solid black;
+        .pokeImage{
+            width:100px;
+        }
+    }
+}
+
+@include mediaQuery-desktop{
+
+}

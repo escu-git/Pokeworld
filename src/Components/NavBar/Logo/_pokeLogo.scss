@@ -1,0 +1,20 @@
+@include mediaQuery-phone{
+    .pokemonLogo{
+        width:5em;
+        flex-grow: 4
+    };
+}
+
+@include mediaQuery-tablet{
+    .pokemonLogo{
+        width:200px;
+    };
+}
+
+@include mediaQuery-desktop{
+    .pokemonLogo{
+        width:300px;
+    };
+}
+
+

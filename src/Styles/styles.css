@@ -1,0 +1,64 @@
+@media screen and (max-width: 380px) {
+  .pokemonLogo {
+    width: 5em;
+    -webkit-box-flex: 4;
+        -ms-flex-positive: 4;
+            flex-grow: 4;
+  }
+}
+
+@media screen and (min-width: 381px) and (max-width: 769px) {
+  .pokemonLogo {
+    width: 200px;
+  }
+}
+
+@media screen and (min-width: 770px) {
+  .pokemonLogo {
+    width: 300px;
+  }
+}
+
+@media screen and (max-width: 380px) {
+  #logOutPokeball {
+    width: 50px;
+    height: 50px;
+    -webkit-box-flex: 1;
+        -ms-flex-positive: 1;
+            flex-grow: 1;
+  }
+}
+
+@media screen and (max-width: 380px) {
+  .navBar {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    background-color: red;
+  }
+}
+
+@media screen and (min-width: 381px) and (max-width: 769px) {
+  .navBar {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    background-color: #376B95;
+    height: 200px;
+  }
+}
+/*# sourceMappingURL=styles.css.map */
