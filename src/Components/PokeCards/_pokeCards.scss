@@ -1,18 +1,157 @@
 @include mediaQuery-phone{
+    .pokeCard{
+        position:relative;
+        display:flex;
+        flex-direction:column;
+        justify-content: space-around;
+        align-items: center;
+        margin:30px auto;
+        width:350px;
+        height:500px;
+        border:4px solid black;
+        border-radius:15px;
+        .pokeCardPokeball{
+            position:absolute;
+            width:80px;
+            top:-40px;
+            right:-40px;
+            animation-name:pokeball;
+            animation-duration:2s;
+            @keyframes pokeball {
+                0% {
+                    top:460px;
+                    right:-40px;
+                }
+                100%{
+                    top:-40px;
+                    right:-40px;
+                    
+                }
+            }
+        }
+        .pokeCardName{
 
+            flex-grow:1;
+            font-size:2.5em;
+            font-weight: bolder;
+            text-transform: uppercase;
+        }
+        .pokeCardImage{
+            flex-grow: 2;
+            &:hover{
+                transition:3s;
+                transform:scale(1.2)
+            }
+        }
+        .pokeCardType{
+            flex-grow:1;
+            font-size:2em;
+            text-transform: uppercase;
+        }
+    }
 }
 
 @include mediaQuery-tablet{
     .pokeCard{
-        width:100px;
-        height:100px;
-        border:1px solid black;
-        .pokeImage{
-            width:100px;
+        position:relative;
+        display:flex;
+        flex-direction:column;
+        justify-content: space-around;
+        align-items: center;
+        margin:30px auto;
+        width:350px;
+        height:500px;
+        border:4px solid black;
+        border-radius:15px;
+        .pokeCardPokeball{
+            position:absolute;
+            width:80px;
+            top:-40px;
+            right:-40px;
+            animation-name:pokeball;
+            animation-duration:2s;
+            @keyframes pokeball {
+                0% {
+                    top:460px;
+                    right:-40px;
+                }
+                100%{
+                    top:-40px;
+                    right:-40px;
+                    
+                }
+            }
+        }
+        .pokeCardName{
+            flex-grow:1;
+            font-size:2.5em;
+            font-weight: bolder;
+            text-transform: uppercase;
+        }
+        .pokeCardImage{
+            flex-grow: 2;
+            &:hover{
+                transition:3s;
+                transform:scale(1.2)
+            }
+        }
+        .pokeCardType{
+            flex-grow:1;
+            font-size:2em;
+            text-transform: uppercase;
         }
     }
 }
 
 @include mediaQuery-desktop{
+    .pokeCard{
+        position:relative;
+        display:flex;
+        flex-direction:column;
+        justify-content: space-around;
+        align-items: center;
+        margin:30px auto;
+        width:350px;
+        height:500px;
+        border:4px solid black;
+        border-radius:15px;
+        .pokeCardPokeball{
+            position:absolute;
+            width:80px;
+            top:-40px;
+            right:-40px;
+            animation-name:pokeball;
+            animation-duration:2s;
+            @keyframes pokeball {
+                0% {
+                    top:460px;
+                    right:-40px;
+                }
+                100%{
+                    top:-40px;
+                    right:-40px;
+                    
+                }
+            }
+        }
+        .pokeCardName{
 
+            flex-grow:1;
+            font-size:2.5em;
+            font-weight: bolder;
+            text-transform: uppercase;
+        }
+        .pokeCardImage{
+            flex-grow: 2;
+            &:hover{
+                transition:3s;
+                transform:scale(1.2)
+            }
+        }
+        .pokeCardType{
+            flex-grow:1;
+            font-size:2em;
+            text-transform: uppercase;
+        }
+    }
 }

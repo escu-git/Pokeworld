@@ -7,9 +7,17 @@
 };
 
 @include mediaQuery-tablet{
-
+    #logOutPokeball{
+        width:50px;
+        height: 50px;
+        flex-grow:1;
+    }  
 };
 
 @include mediaQuery-desktop{
-    
+    #logOutPokeball{
+        width:50px;
+        height: 50px;
+        flex-grow:1;
+    }  
 };

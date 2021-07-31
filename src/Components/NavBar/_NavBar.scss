@@ -19,5 +19,12 @@
 }
 
 @include mediaQuery-desktop{
-
+    .navBar{
+        display:flex;
+        flex-direction:row;
+        justify-content: center;
+        align-items: center;
+        background-color:#376B95;
+        height:200px;
+    }
 }

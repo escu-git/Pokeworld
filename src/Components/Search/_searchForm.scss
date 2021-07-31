@@ -1,0 +1,26 @@
+
+@include mediaQuery-phone{
+    .searchForm{
+        display:flex;
+        flex-direction:column;
+    }
+}
+
+@include mediaQuery-tablet{
+    .searchForm{
+        display:flex;
+        flex-direction:column;
+    }
+}
+
+@include mediaQuery-desktop{
+    .searchForm{
+        display:flex;
+        flex-direction:column;
+        width:15%;
+        margin:auto;
+        justify-content: center;
+        align-items:center;
+        gap:5px;
+    }
+}

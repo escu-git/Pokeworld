@@ -1,0 +1,11 @@
+<?xml version="1.0" ?><!DOCTYPE svg  PUBLIC '-//W3C//DTD SVG 1.1//EN'  'http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd'><svg height="1.66991in" style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd" version="1.1" viewBox="0 0 222 222" width="1.6699in" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><defs><style type="text/css">
+   <![CDATA[
+    .fil1 {fill:#FEFEFE}
+    .fil3 {fill:#DCDDDD}
+    .fil0 {fill:#C9CACA}
+    .fil5 {fill:#332C2B}
+    .fil4 {fill:#FFF000}
+    .fil2 {fill:#1D1819}
+    .fil6 {fill:#FEFEFE;fill-opacity:0.501961}
+   ]]>
+  </style></defs><g id="Layer_x0020_1"><circle class="fil0" cx="111" cy="111" r="111"/><path class="fil1" d="M216 111c0,58 -47,105 -105,105 -58,0 -105,-47 -105,-105l210 0z"/><path class="fil2" d="M111 6c58,0 105,47 105,105l-210 0c0,-58 47,-105 105,-105z"/><path class="fil3" d="M37 178c22,27 117,29 173,-49 -29,111 -149,88 -173,49z"/><path class="fil4" d="M111 6c33,0 63,15 82,39l0 58 23 0c0,2 0,5 0,8l-210 0c0,-3 0,-6 0,-8l20 0 0 -53c19,-27 50,-44 85,-44zm-35 97l71 0 0 -85 -71 0 0 85z"/><path class="fil5" d="M216 103c0,2 0,5 0,8 0,2 0,5 0,7l-210 0c0,-2 0,-5 0,-7 0,-3 0,-6 0,-8l210 0z"/><circle class="fil5" cx="111" cy="111" r="35"/><circle class="fil1" cx="111" cy="111" r="23"/><path class="fil6" d="M17 87c0,0 1,-36 43,-62 41,-26 39,-4 29,4 -6,6 -54,6 -72,58z"/></g></svg>

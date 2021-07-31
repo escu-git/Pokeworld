@@ -1,27 +1,42 @@
 import React,{useState, useEffect} from 'react'
+import { useParams } from 'react-router';
 import '../../Styles/styles.css';
-import PokeCard from '../PokeCards/PokeCard'
+import fetching from '../../JavaScript/functions';
+import PokeCard from '../PokeCards/PokeCard';
+import SearchBar from '../Search/SearchBar';
 
-const MainContainer = () => {
+const MainContainer = () =>{
     const[pokemon, setPokemon] = useState(null)
-    let pokeArray=[];
-    const fetchPokemons = async() =>{
-        const pokeApi = await fetch('https://pokeapi.co/api/v2/pokemon')
-        pokeApi.json().then(res=>{
-            res.results.forEach(x=>pokeArray.push(x))
-        })
-    }
+    const[search, setSearch] = useState(null)
+    let {id} = useParams();
+    console.log(id)
+    console.log(`Este es el useparams: ${id}`)
     useEffect(()=>{
-        fetchPokemons();
-        console.log(pokeArray)
-        setPokemon(pokeArray);
-    },[])
-console.log(pokemon)
+        if(id !== null || undefined){
+            try{
+                fetch(`https://pokeapi.co/api/v2/pokemon/${id}`).then(res=>{
+                return res.json()
+                .then(res=>{
+                   setPokemon(res)
+                })
+            })
+            }catch(err){
+                console.log(err)
+            }
+        }
+    },[id])
+    console.log(pokemon)
     return (
         <div>
-            {pokemon?.map(pokemon=>{return(<PokeCard url={pokemon.url} name={pokemon.name}/>)})}
+            <SearchBar/>
+            <div>
+                {pokemon && <PokeCard key={pokemon.name} pokemonData={pokemon}/>}
+            </div>
         </div>
     )
 }
 
-export default MainContainer;
+
+
+
+export default MainContainer
