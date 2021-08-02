@@ -24,10 +24,16 @@ const fn = {
         })
         console.log(images)
     },
+    fetchAllPokemons:async()=>{
+        fetch('https://pokeapi.co/api/v2/pokemon')
+        .then(res=>{
+            return res.json()
+        })
+    }
 
 }
 
 
-export default fn;
+module.exports= fn;
 
 

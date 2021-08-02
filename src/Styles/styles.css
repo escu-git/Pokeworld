@@ -1,4 +1,48 @@
 @media screen and (max-width: 380px) {
+  .cardsContainer {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
+@media screen and (min-width: 381px) and (max-width: 769px) {
+  .cardsContainer {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+}
+
+@media screen and (min-width: 770px) {
+  .cardsContainer {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    width: 15%;
+    margin: auto;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    gap: 5px;
+  }
+}
+
+@media screen and (max-width: 380px) {
   .pokemonLogo {
     width: 5em;
     -webkit-box-flex: 4;
@@ -166,7 +210,7 @@
     width: 350px;
     height: 500px;
     border: 4px solid black;
-    border-radius: 15px;
+    border: radius 15px;
   }
   .pokeCard .pokeCardPokeball {
     position: absolute;
@@ -245,7 +289,7 @@
     width: 350px;
     height: 500px;
     border: 4px solid black;
-    border-radius: 15px;
+    border-radius: 0px;
   }
   .pokeCard .pokeCardPokeball {
     position: absolute;
@@ -372,8 +416,8 @@
   .pokeCard .pokeCardImage:hover {
     -webkit-transition: 3s;
     transition: 3s;
-    -webkit-transform: scale(1.2);
-            transform: scale(1.2);
+    -webkit-transform: scale(1.1);
+            transform: scale(1.1);
   }
   .pokeCard .pokeCardType {
     -webkit-box-flex: 1;
@@ -382,5 +426,53 @@
     font-size: 2em;
     text-transform: uppercase;
   }
+}
+
+.normal {
+  background-color: lightpink;
+}
+
+.fighting {
+  background-color: rgba(123, 25, 192, 0.767);
+}
+
+.flying {
+  background-color: skyblue;
+}
+
+.poison {
+  background-color: darkolivegreen;
+}
+
+.ground {
+  background-color: burlywood;
+}
+
+.rock {
+  background-color: grey;
+}
+
+.steel {
+  background-color: lightslategray;
+}
+
+.fire {
+  background-color: red;
+}
+
+.water {
+  background-color: royalblue;
+}
+
+.electric {
+  background-color: yellow;
+}
+
+.psychic {
+  background-color: slateblue;
+}
+
+.grass {
+  background-color: lightgreen;
 }
 /*# sourceMappingURL=styles.css.map */

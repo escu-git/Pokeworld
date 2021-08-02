@@ -1,9 +1,11 @@
 @import './variables';
 @import './mixins';
 
+@import '../Components/Main/PokemonList/allPokemons';
 @import '../Components/NavBar/Logo/pokeLogo';
 @import '../Components/Login/loginIcon';
 @import '../Components/Search/searchForm';
 @import '../Components/NavBar/NavBar';
 @import '../Components/Loading/loading';
 @import '../Components/PokeCards/pokeCards';
+@import '../Components/PokeCards/pokemonTypeCard';

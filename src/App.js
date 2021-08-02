@@ -1,9 +1,10 @@
 import './Styles/styles.css';
-import NavBar from './Components/NavBar/NavBar';
-import MainContainer from './Components/Main/MainContainer';
 import {BrowserRouter as Router, Switch, Route} from 'react-router-dom';
+import NavBar from './Components/NavBar/NavBar';
+import SpecificPokemon from './Components/Main/SpecificPokemon/SpecificPokemon';
 import SearchBar from './Components/Search/SearchBar';
 import Loading from './Components/Loading/Loading';
+import AllPokemons from './Components/Main/PokemonList/AllPokemons';
 
 function App() {
   return (
@@ -15,7 +16,10 @@ function App() {
           <SearchBar/>
         </Route>
         <Route exact path ='/search-pokemon/:id'>
-          <MainContainer/>
+          <SpecificPokemon/>
+        </Route>
+        <Route exact path='/all'>
+          <AllPokemons/>
         </Route>
         <Route exact path='/loading'>
           <Loading/>

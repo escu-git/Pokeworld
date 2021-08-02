@@ -1,15 +1,15 @@
-import React, {useEffect, useState} from 'react'
+import React from 'react'
 import '../../Styles/styles.css';
-import stylesFn from '../../JavaScript/dynamicStyles';
 import pokeball from '../../assets/icons/pokeball.svg';
 
-const PokeCard = ({pokemonData, key}) => {
+const PokeCard = ({pokemonData, pokeId}) => {
     const{id, name, sprites, types} = pokemonData;
+    const pokeTypeColor = types[0].type.name;
     return (
-        <div className='pokeCard' id={key}>
+        <div className={`pokeCard ${pokeTypeColor}`} id={pokeId}>
             <img className='pokeCardPokeball'src={pokeball} alt='Pokeball'/>
             <h2 className='pokeCardName'>#{id} {name}</h2>
-            <img src={sprites.front_default} alt={name} className='pokeCardImage'/>
+            <img src={sprites.other.dream_world.front_default} alt={name} className='pokeCardImage'/>
             <span className='pokeCardType'>{types[0].type.name}</span>
         </div>
     )

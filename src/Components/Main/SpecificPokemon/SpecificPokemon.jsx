@@ -1,16 +1,12 @@
 import React,{useState, useEffect} from 'react'
 import { useParams } from 'react-router';
-import '../../Styles/styles.css';
-import fetching from '../../JavaScript/functions';
-import PokeCard from '../PokeCards/PokeCard';
-import SearchBar from '../Search/SearchBar';
+import '../../../Styles/styles.css';
+import PokeCard from '../../PokeCards/PokeCard';
+import SearchBar from '../../Search/SearchBar';
 
-const MainContainer = () =>{
+const SpecificPokemon = () =>{
     const[pokemon, setPokemon] = useState(null)
-    const[search, setSearch] = useState(null)
     let {id} = useParams();
-    console.log(id)
-    console.log(`Este es el useparams: ${id}`)
     useEffect(()=>{
         if(id !== null || undefined){
             try{
@@ -25,12 +21,11 @@ const MainContainer = () =>{
             }
         }
     },[id])
-    console.log(pokemon)
     return (
         <div>
             <SearchBar/>
             <div>
-                {pokemon && <PokeCard key={pokemon.name} pokemonData={pokemon}/>}
+                {pokemon && <PokeCard key={pokemon.id} pokeId={pokemon.name} pokemonData={pokemon}/>}
             </div>
         </div>
     )
@@ -39,4 +34,4 @@ const MainContainer = () =>{
 
 
 
-export default MainContainer
+export default SpecificPokemon;

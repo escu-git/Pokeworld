@@ -1,0 +1,26 @@
+
+@include mediaQuery-phone{
+    .cardsContainer{
+        display:flex;
+        flex-direction:column;
+    }
+}
+
+@include mediaQuery-tablet{
+    .cardsContainer{
+        display:flex;
+        flex-direction:row;
+    }
+}
+
+@include mediaQuery-desktop{
+    .cardsContainer{
+        display:flex;
+        flex-direction:row;
+        flex-wrap:wrap;
+        width:15%;
+        margin:auto;
+        justify-content: space-between;
+        gap:5px;
+    }
+}
