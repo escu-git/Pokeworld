@@ -10,15 +10,19 @@
     .cardsContainer{
         display:flex;
         flex-direction:row;
+        flex-wrap:wrap;
+        margin:auto;
+        justify-content: space-between;
+        gap:5px;
     }
 }
 
 @include mediaQuery-desktop{
     .cardsContainer{
+
         display:flex;
         flex-direction:row;
         flex-wrap:wrap;
-        width:15%;
         margin:auto;
         justify-content: space-between;
         gap:5px;

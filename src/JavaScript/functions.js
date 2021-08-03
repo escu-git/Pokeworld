@@ -1,21 +1,5 @@
 
 const fn = {
-    pokemonsList: async(id) =>{
-        try{
-            fetch(`https://pokeapi.co/api/v2/pokemon/${id}`).then(res=>{
-            return res.json()
-            .then(res=>{
-                fetch(res.results.url)
-                .then(res=>{
-                    console.log(res)
-                    return res
-                })
-            })
-        })
-        }catch(err){
-            console.log(err)
-        }
-    },
     importImages: async(requiredImages)=>{
         let images ={};
         requiredImages.keys().forEach((item, index)=>{
@@ -24,13 +8,6 @@ const fn = {
         })
         console.log(images)
     },
-    fetchAllPokemons:async()=>{
-        fetch('https://pokeapi.co/api/v2/pokemon')
-        .then(res=>{
-            return res.json()
-        })
-    }
-
 }
 
 

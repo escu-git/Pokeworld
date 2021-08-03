@@ -1,14 +1,11 @@
 import React from 'react'
-import fn from '../../JavaScript/functions';
+import pokeImage from '../../assets/icons/greenPokeball.svg'
 
-const Loading = async() => {
-    let images = await fn.importImages(require.context('../../assets/icons', false, /\.(png|jpeg|svg)$/))
-
-    console.log(images)
-
+const Loading = () => {
+    
     return (
-        <div>
-            <img src={images.pokeball.svg} alt='Loading spinner'/>
+        <div className='loadingContainer'>
+            <img src={pokeImage} alt='Loading spinner' className='spinnerImage'/>
         </div>
     )
 }

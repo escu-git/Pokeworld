@@ -1,15 +1,16 @@
-import { promises } from 'fs';
-import React,{useState, useEffect} from 'react'
+import React,{useState, useEffect} from 'react';
 import PokeCard from '../../PokeCards/PokeCard';
-
-
+import Loading from '../../Loading/Loading';
 
 const AllPokemons = () => {
     const[pokemonList, setPokemonList]=useState([])
     const[offset, setOffset] =useState(0);
-    const[limit, setLimit] =useState(25);
+    const[limit, setLimit] =useState(100);
+    const[loading, setLoading]=useState(null);
     
-    const fetchPokemon =async () =>{fetch(`https://pokeapi.co/api/v2/pokemon?offset=${offset}?limit=${limit}`)
+    const fetchPokemon =async () =>{
+        setLoading(true)
+        fetch(`https://pokeapi.co/api/v2/pokemon?limit=${limit}&offset=${offset}`)
         .then(res=>{return res.json()
         })
         .then(res=>{
@@ -19,16 +20,19 @@ const AllPokemons = () => {
         }).then(res=>{let pokemons = res.map(x=>fetch(x).then(res=>{
             return res.json()
         }))
-        return Promise.all(pokemons)}).then(res=>{setPokemonList(res)})
+        return Promise.all(pokemons)}).then(res=>{setPokemonList(res) 
+            console.log(pokemonList)
+            setLoading(false);})
     }
 
     useEffect(() => {
-        fetchPokemon()
-    }, [offset])
+        fetchPokemon();
+    }, [])
+    
 
     return (
         <div className='cardsContainer'>
-            {pokemonList?.map((pokemon)=>{return(<PokeCard key={pokemon.id} pokeId={pokemon.name} pokemonData={pokemon}/>)})}
+            {loading? <Loading/> : pokemonList?.map((pokemon)=>{return(<PokeCard key={pokemon.id} pokeId={pokemon.name} pokemonData={pokemon}/>)})}
         </div>
     )
 }

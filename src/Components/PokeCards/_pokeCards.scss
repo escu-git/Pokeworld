@@ -135,7 +135,6 @@
             }
         }
         .pokeCardName{
-
             flex-grow:1;
             font-size:2.5em;
             font-weight: bolder;
@@ -145,7 +144,7 @@
             flex-grow: 2;
             &:hover{
                 transition:3s;
-                transform:scale(1.1)
+                transform:scale(1.1);
             }
         }
         .pokeCardType{
