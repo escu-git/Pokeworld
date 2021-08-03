@@ -37,6 +37,7 @@
             border:2px solid black;
             border-radius:10px;
             box-shadow: lightslategray 4px 4px;
+            cursor:pointer;
             &:active{
                 transition:0.3s;
                 transform:translateY(3px);
