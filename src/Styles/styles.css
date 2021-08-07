@@ -496,6 +496,8 @@
     -webkit-box-flex: 2;
         -ms-flex-positive: 2;
             flex-grow: 2;
+    max-width: 20em;
+    max-height: 70%;
   }
   .pokeCard .pokeCardImage:hover {
     -webkit-transition: 3s;

@@ -142,6 +142,8 @@
         }
         .pokeCardImage{
             flex-grow: 2;
+            max-width:20em;
+            max-height:70%;
             &:hover{
                 transition:3s;
                 transform:scale(1.1);
