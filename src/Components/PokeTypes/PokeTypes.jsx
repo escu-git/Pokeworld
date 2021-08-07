@@ -1,16 +1,10 @@
-import React, {useState} from 'react'
+import React from 'react'
 
-const PokeTypes = ({pokeData}) => {
-    let pokeTypeColor = pokeData.name
-    const[selected, setSelected]=useState(null)
-
-    const clickHandler = (type) =>{
-        console.log(type)
-    }
-
+const PokeTypes = ({pokeData, clickHandler}) => {
+    let pokeTypeColor = pokeData.name;
     return (
-        <div class={`typeCard ${pokeTypeColor}`} onClick={()=>{clickHandler(pokeData.name)}}>
-            {pokeData.name}
+        <div className={`typeCard ${pokeTypeColor}`} onClick={()=>clickHandler(pokeData.name)}>
+            {pokeData.name} 
         </div>
     )
 }

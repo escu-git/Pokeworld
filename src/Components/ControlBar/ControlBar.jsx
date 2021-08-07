@@ -1,10 +1,12 @@
 import React from 'react'
 import PokemonTypes from '../Main/PokemonTypes/PokemonTypes'
+import SearchBar from '../Search/SearchBar';
 
 const ControlBar = () => {
     return (
-        <div>
+        <div className='controlBar'>
             <PokemonTypes/>
+            <SearchBar/>
         </div>
     )
 }

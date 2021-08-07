@@ -18,7 +18,7 @@ const SearchBar = () => {
 
     return (
         <div className='searchForm'>
-            <label for='searchBar'>SEARCH POKEMON:</label>
+            <label>SEARCH POKEMON:</label>
             <input 
                 type='text' 
                 id='searchBar' 

@@ -154,6 +154,7 @@
         -ms-flex-direction: row;
             flex-direction: row;
     background-color: red;
+    height: 8em;
   }
 }
 
@@ -173,7 +174,7 @@
         -ms-flex-align: center;
             align-items: center;
     background-color: #376B95;
-    height: 200px;
+    height: 8em;
   }
 }
 
@@ -192,7 +193,43 @@
         -ms-flex-align: center;
             align-items: center;
     background-color: #376B95;
-    height: 200px;
+    height: 8em;
+  }
+}
+
+@media screen and (max-width: 380px) {
+  .controlBar {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+}
+
+@media screen and (min-width: 381px) and (max-width: 769px) {
+  .controlBar {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+}
+
+@media screen and (min-width: 770px) {
+  .controlBar {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
   }
 }
 
@@ -472,6 +509,68 @@
             flex-grow: 1;
     font-size: 2em;
     text-transform: uppercase;
+  }
+}
+
+@media screen and (max-width: 380px) {
+  .typeCardContainer .typeCard {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    text-transform: uppercase;
+    font-weight: 600;
+    width: 90px;
+    height: 40px;
+    border: 2px solid black;
+    border-radius: 10px;
+    -webkit-box-shadow: lightslategray 4px 4px;
+            box-shadow: lightslategray 4px 4px;
+    cursor: pointer;
+  }
+  .typeCardContainer .typeCard:active {
+    -webkit-transition: 0.3s;
+    transition: 0.3s;
+    -webkit-transform: translateY(3px);
+            transform: translateY(3px);
+    -webkit-box-shadow: lightslategray 1px 1px;
+            box-shadow: lightslategray 1px 1px;
+  }
+}
+
+@media screen and (min-width: 381px) and (max-width: 769px) {
+  .typeCardContainer .typeCard {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    text-transform: uppercase;
+    font-weight: 600;
+    width: 90px;
+    height: 40px;
+    border: 2px solid black;
+    border-radius: 10px;
+    -webkit-box-shadow: lightslategray 4px 4px;
+            box-shadow: lightslategray 4px 4px;
+    cursor: pointer;
+  }
+  .typeCardContainer .typeCard:active {
+    -webkit-transition: 0.3s;
+    transition: 0.3s;
+    -webkit-transform: translateY(3px);
+            transform: translateY(3px);
+    -webkit-box-shadow: lightslategray 1px 1px;
+            box-shadow: lightslategray 1px 1px;
   }
 }
 

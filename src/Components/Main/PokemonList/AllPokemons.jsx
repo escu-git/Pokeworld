@@ -1,33 +1,34 @@
 import React,{useState, useEffect} from 'react';
 import PokeCard from '../../PokeCards/PokeCard';
 import Loading from '../../Loading/Loading';
+import { useShowPokemon } from '../../../Contexts/PokeContext';
+import fn from '../../../JavaScript/functions';
 
 const AllPokemons = () => {
-    const[pokemonList, setPokemonList]=useState([])
-    const[offset, setOffset] =useState(0);
-    const[limit, setLimit] =useState(100);
+    const[pokemonList, setPokemonList]=useState([]);
     const[loading, setLoading]=useState(null);
-    
-    const fetchPokemon =async () =>{
-        setLoading(true)
-        fetch(`https://pokeapi.co/api/v2/pokemon?limit=${limit}&offset=${offset}`)
-        .then(res=>{return res.json()
-        })
-        .then(res=>{
-            let results = res.results;
-            let array = results.map(x=> x.url)
-            return array
-        }).then(res=>{let pokemons = res.map(x=>fetch(x).then(res=>{
-            return res.json()
-        }))
-        return Promise.all(pokemons)}).then(res=>{setPokemonList(res) 
-            console.log(pokemonList)
-            setLoading(false);})
-    }
+    const usePokemon = useShowPokemon();
+    const {pokemonSelection,limit, offset}= usePokemon;
+
+    const allPokemons =() =>{
+        setLoading(true);
+       try{ 
+                fn.fetchAllPokemons(
+                    pokemonSelection, 
+                    limit, 
+                    offset
+                ).then(res=>{setPokemonList(res) 
+                    setLoading(false);
+                })
+        }catch(err){
+            console.log(err)
+        };
+    };
 
     useEffect(() => {
-        fetchPokemon();
-    }, [])
+        allPokemons()
+        // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, [pokemonSelection]);
     
 
     return (

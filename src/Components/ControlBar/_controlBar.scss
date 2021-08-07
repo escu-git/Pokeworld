@@ -1,0 +1,21 @@
+
+@include mediaQuery-phone{
+    .controlBar{
+       display:flex;
+       flex-direction:row; 
+    }
+}
+
+@include mediaQuery-tablet{
+    .controlBar{
+        display:flex;
+        flex-direction:row; 
+     }
+}
+
+@include mediaQuery-desktop{
+    .controlBar{
+        display:flex;
+        flex-direction:row; 
+     }
+}
