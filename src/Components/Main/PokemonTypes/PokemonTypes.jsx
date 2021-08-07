@@ -4,12 +4,6 @@ import { useShowPokemon } from '../../../Contexts/PokeContext';
 
 const PokemonTypes = () => {
     const[types, setTypes]=useState(null);
-    const showPokemon = useShowPokemon();
-
-    const selectedPokemonType=(selectedType)=>{
-        showPokemon.setType(selectedType);
-        showPokemon.setUsedFunction()
-    }
 
     const fetchTypes = async()=>{
         fetch('https://pokeapi.co/api/v2/type')
@@ -29,9 +23,10 @@ const PokemonTypes = () => {
     useEffect(()=>{
         fetchTypes()
     },[])
+    
     return (
         <div className='typeCardContainer'>
-            {types?.map(type=>{return(<PokeTypes key={type.name} pokeData={type} clickHandler={selectedPokemonType}/>)})}
+            {types?.map(type=>{return(<PokeTypes key={type.name} pokeData={type}/>)})}
         </div>
     )
 }

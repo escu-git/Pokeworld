@@ -6,7 +6,7 @@ import SearchBar from './Components/Search/SearchBar';
 import Loading from './Components/Loading/Loading';
 import AllPokemons from './Components/Main/PokemonList/AllPokemons';
 import ControlBar from './Components/ControlBar/ControlBar';
-import PokemonTypes from './Components/Main/PokemonTypes/PokemonTypes';
+import FilteredByType from './Components/Main/FilteredByType/FilteredByType';
 import  {PokemonTypeProvider}  from './Contexts/PokeContext';
 
 function App() {
@@ -27,7 +27,7 @@ function App() {
             <AllPokemons/>
           </Route>
           <Route exact path='/filtered-pokemons/:id'>
-            <PokemonTypes/>
+            <FilteredByType/>
           </Route>
           <Route exact path='/loading'>
             <Loading/>

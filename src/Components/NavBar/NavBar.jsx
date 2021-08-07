@@ -2,7 +2,6 @@ import React from 'react'
 import { NavLink } from 'react-router-dom';
 import '../../Styles/styles.css'
 import LoginIcon from '../Login/LoginIcon';
-import SearchBar from '../Search/SearchBar';
 import PokeLogo from './Logo/PokeLogo';
 
 

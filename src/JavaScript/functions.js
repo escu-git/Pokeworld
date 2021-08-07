@@ -28,12 +28,12 @@ const fn = {
     },
     fetchFilteredPokemons: async(typeSelected, limit, offset)=>{
         return fetch(`https://pokeapi.co/api/v2/type/${typeSelected}?limit=${limit}&offset=${offset}`)
-        .then(res=>res.json()
+        .then(res=>{return res.json()}
         )
         .then(res=>{
-            let results = res.results;
-            let array = results.map(x=> x.url)
-            return array
+            let results = res.pokemon;
+            let urlArray = results.map(x=>x.pokemon.url)
+            return urlArray
         }).then(res=>{let pokemons = res.map(x=>fetch(x)
             .then(res=>{
             return res.json()
