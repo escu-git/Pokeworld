@@ -29,7 +29,7 @@ const AllPokemons = () => {
         allPokemons()
         // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [pokemonSelection]);
-    
+    console.log(pokemonList)
 
     return (
         <div className='cardsContainer'>

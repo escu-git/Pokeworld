@@ -59,6 +59,7 @@ const SearchBar = () => {
         );
     }
     
+    
     return (
         <div className="card">
 

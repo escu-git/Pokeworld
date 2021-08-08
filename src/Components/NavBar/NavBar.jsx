@@ -12,9 +12,6 @@ const NavBar = () => {
         <NavLink to='/'>
             <PokeLogo/>
         </NavLink>
-            <NavLink to='/pokemons/all'>
-            <button>TODOS</button>
-        </NavLink>
         </div>
     )
 }
