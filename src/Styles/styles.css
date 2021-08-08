@@ -31,6 +31,7 @@
 
 @media screen and (min-width: 770px) {
   .cardsContainer {
+    padding: 10px;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -40,11 +41,11 @@
             flex-direction: row;
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
-    margin: auto;
+    margin: 30px;
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
-    gap: 5px;
+    gap: 30px;
   }
 }
 
@@ -124,23 +125,161 @@
 }
 
 @media screen and (min-width: 770px) {
-  .searchForm {
+  .card {
+    margin-bottom: 2rem;
+  }
+  input[type="number"] {
+    -moz-appearance: textfield;
+  }
+  input[type="number"]::-webkit-outer-spin-button,
+  input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+  @-webkit-keyframes pulse {
+    0% {
+      background-color: rgba(165, 165, 165, 0.1);
+    }
+    50% {
+      background-color: rgba(165, 165, 165, 0.3);
+    }
+    100% {
+      background-color: rgba(165, 165, 165, 0.1);
+    }
+  }
+  @keyframes pulse {
+    0% {
+      background-color: rgba(165, 165, 165, 0.1);
+    }
+    50% {
+      background-color: rgba(165, 165, 165, 0.3);
+    }
+    100% {
+      background-color: rgba(165, 165, 165, 0.1);
+    }
+  }
+  .p-autocomplete {
+    width: 300px;
+  }
+  .customer-badge {
+    border-radius: 2px;
+    padding: .25em .5rem;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 12px;
+    letter-spacing: .3px;
+  }
+  .customer-badge.status-qualified {
+    background-color: #C8E6C9;
+    color: #256029;
+  }
+  .customer-badge.status-unqualified {
+    background-color: #FFCDD2;
+    color: #C63737;
+  }
+  .customer-badge.status-negotiation {
+    background-color: #FEEDAF;
+    color: #8A5340;
+  }
+  .customer-badge.status-new {
+    background-color: #B3E5FC;
+    color: #23547B;
+  }
+  .customer-badge.status-renewal {
+    background-color: #ECCFFF;
+    color: #694382;
+  }
+  .customer-badge.status-proposal {
+    background-color: #FFD8B2;
+    color: #805B36;
+  }
+  .product-badge {
+    border-radius: 2px;
+    padding: .25em .5rem;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 12px;
+    letter-spacing: .3px;
+  }
+  .product-badge.status-instock {
+    background: #C8E6C9;
+    color: #256029;
+  }
+  .product-badge.status-outofstock {
+    background: #FFCDD2;
+    color: #C63737;
+  }
+  .product-badge.status-lowstock {
+    background: #FEEDAF;
+    color: #8A5340;
+  }
+  .order-badge {
+    border-radius: 2px;
+    padding: .25em .5rem;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 12px;
+    letter-spacing: .3px;
+  }
+  .order-badge.order-delivered {
+    background: #C8E6C9;
+    color: #256029;
+  }
+  .order-badge.order-cancelled {
+    background: #FFCDD2;
+    color: #C63737;
+  }
+  .order-badge.order-pending {
+    background: #FEEDAF;
+    color: #8A5340;
+  }
+  .order-badge.order-returned {
+    background: #ECCFFF;
+    color: #694382;
+  }
+  .image-text {
+    vertical-align: middle;
+    margin-left: .5rem;
+  }
+  .p-column-filter {
+    width: 100%;
+  }
+  .pokemon-item {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -webkit-box-orient: vertical;
+    -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    width: 15%;
-    margin: auto;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+        -ms-flex-direction: row;
+            flex-direction: row;
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    gap: 5px;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    height: 50px;
+  }
+  .pokemon-item:hover {
+    -webkit-transition: 0.2s;
+    transition: 0.2s;
+    font-weight: bolder;
+    -webkit-transform: scale(1.01);
+            transform: scale(1.01);
+    z-index: 1;
+  }
+  .pokemon-item .pokemon-img {
+    -webkit-box-flex: 1;
+        -ms-flex-positive: 1;
+            flex-grow: 1;
+    max-width: 5em;
+  }
+  .pokemon-item .pokemon-name {
+    -webkit-box-flex: 1;
+        -ms-flex-positive: 1;
+            flex-grow: 1;
+    text-align: center;
+    text-transform: capitalize;
   }
 }
 
@@ -373,7 +512,7 @@
             align-items: center;
     margin: 30px auto;
     width: 350px;
-    height: 500px;
+    height: 400px;
     border: 4px solid black;
     border-radius: 0px;
   }
@@ -454,15 +593,15 @@
             align-items: center;
     margin: 30px auto;
     width: 350px;
-    height: 500px;
+    height: 450px;
     border: 4px solid black;
     border-radius: 15px;
   }
   .pokeCard .pokeCardPokeball {
     position: absolute;
-    width: 80px;
-    top: -40px;
-    right: -40px;
+    width: 60px;
+    top: -30px;
+    right: -30px;
     -webkit-animation-name: pokeball;
             animation-name: pokeball;
     -webkit-animation-duration: 2s;
@@ -489,19 +628,17 @@
     }
   }
   .pokeCard .pokeCardName {
-    -webkit-box-flex: 1;
-        -ms-flex-positive: 1;
-            flex-grow: 1;
     font-size: 2.5em;
     font-weight: bolder;
     text-transform: uppercase;
   }
   .pokeCard .pokeCardImage {
-    -webkit-box-flex: 2;
-        -ms-flex-positive: 2;
-            flex-grow: 2;
-    max-width: 20em;
+    -webkit-box-flex: 3;
+        -ms-flex-positive: 3;
+            flex-grow: 3;
+    max-width: 100%;
     max-height: 70%;
+    margin-bottom: 40px;
   }
   .pokeCard .pokeCardImage:hover {
     -webkit-transition: 3s;
@@ -510,11 +647,35 @@
             transform: scale(1.1);
   }
   .pokeCard .pokeCardType {
-    -webkit-box-flex: 1;
-        -ms-flex-positive: 1;
-            flex-grow: 1;
-    font-size: 2em;
+    position: absolute;
+    width: 150px;
+    height: 40px;
+    bottom: -20px;
+    right: 15%;
+    z-index: 1;
+    background-color: lightgray;
+    border: 3px solid black;
+    border-radius: 15px;
+    color: black;
+    text-align: center;
+    font-weight: bold;
+    font-size: 1.5em;
     text-transform: uppercase;
+  }
+  .pokeCard .pokeNumber {
+    position: absolute;
+    width: 100px;
+    height: 40px;
+    top: -20px;
+    right: 15%;
+    z-index: 1;
+    background-color: lightgray;
+    border: 3px solid black;
+    border-radius: 15px;
+    color: black;
+    text-align: center;
+    font-weight: bold;
+    font-size: 1.5em;
   }
 }
 

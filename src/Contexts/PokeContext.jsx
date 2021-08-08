@@ -3,7 +3,7 @@ export const showPokemonContext = createContext();
 export const useShowPokemon = () => useContext(showPokemonContext);
 
 export const PokemonTypeProvider = ({children}) =>{
-    const[offset, setOffset] =useState(100);
+    const[offset, setOffset] =useState(0);
     const[limit, setLimit] =useState(100);
     const[type, setType] =useState(null);
     const INITIAL_STATE = `pokemon?limit=${limit}&offset=${offset}`;
@@ -11,8 +11,8 @@ export const PokemonTypeProvider = ({children}) =>{
 
     useEffect(()=>{
         console.log(pokemonSelection)
-        // eslint-disable-next-line react-hooks/exhaustive-deps
-    },[])
+        
+    },[])// eslint-disable-next-line react-hooks/exhaustive-deps
 
     return(
         <showPokemonContext.Provider value={{

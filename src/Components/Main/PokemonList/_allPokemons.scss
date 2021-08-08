@@ -19,12 +19,12 @@
 
 @include mediaQuery-desktop{
     .cardsContainer{
-
+        padding:10px;
         display:flex;
         flex-direction:row;
         flex-wrap:wrap;
-        margin:auto;
+        margin:30px;
         justify-content: space-between;
-        gap:5px;
+        gap:30px;
     }
 }

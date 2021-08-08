@@ -2,7 +2,6 @@ import './Styles/styles.css';
 import {BrowserRouter as Router, Switch, Route} from 'react-router-dom';
 import NavBar from './Components/NavBar/NavBar';
 import SpecificPokemon from './Components/Main/SpecificPokemon/SpecificPokemon';
-import SearchBar from './Components/Search/SearchBar';
 import Loading from './Components/Loading/Loading';
 import AllPokemons from './Components/Main/PokemonList/AllPokemons';
 import ControlBar from './Components/ControlBar/ControlBar';
@@ -18,7 +17,7 @@ function App() {
         <ControlBar/>
         <Switch>
           <Route exact path ='/'>
-            <SearchBar/>
+          <Loading/>
           </Route>
           <Route exact path ='/search-pokemon/:id'>
             <SpecificPokemon/>

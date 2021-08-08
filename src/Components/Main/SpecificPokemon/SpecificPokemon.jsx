@@ -21,7 +21,6 @@ const SpecificPokemon = () =>{
 
     return (
         <div>
-            <SearchBar/>
             <div>
                 {pokemon && <PokeCard key={pokemon.id} pokeId={pokemon.name} pokemonData={pokemon}/>}
             </div>
