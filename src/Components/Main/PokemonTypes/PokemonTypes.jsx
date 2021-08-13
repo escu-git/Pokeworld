@@ -1,6 +1,5 @@
 import React,{useState, useEffect} from 'react'
 import PokeTypes from '../../PokeTypes/PokeTypes'
-import { useShowPokemon } from '../../../Contexts/PokeContext';
 
 const PokemonTypes = () => {
     const[types, setTypes]=useState(null);

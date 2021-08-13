@@ -13,13 +13,13 @@ const AllPokemons = () => {
     const allPokemons =() =>{
         setLoading(true);
        try{ 
-                fn.fetchAllPokemons(
-                    pokemonSelection, 
-                    limit, 
-                    offset
-                ).then(res=>{setPokemonList(res) 
-                    setLoading(false);
-                })
+        fn.fetchAllPokemons(
+            pokemonSelection, 
+            limit, 
+            offset
+        ).then(res=>{setPokemonList(res) 
+            setLoading(false);
+        })
         }catch(err){
             console.log(err)
         };
