@@ -25,7 +25,7 @@
 @include mediaQuery-tablet{
     .typeCardContainer{
         .typeCard{
-  display:flex;
+            display:flex;
             justify-content:center;
             align-items:center;
             text-transform: uppercase;

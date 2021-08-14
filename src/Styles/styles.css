@@ -67,6 +67,9 @@
 @media screen and (min-width: 770px) {
   .pokemonLogo {
     width: 300px;
+    -webkit-box-flex: 5;
+        -ms-flex-positive: 5;
+            flex-grow: 5;
   }
 }
 
@@ -74,9 +77,9 @@
   #logOutPokeball {
     width: 50px;
     height: 50px;
-    -webkit-box-flex: 1;
-        -ms-flex-positive: 1;
-            flex-grow: 1;
+    position: absolute;
+    bottom: 33%;
+    left: 80px;
   }
 }
 
@@ -84,9 +87,9 @@
   #logOutPokeball {
     width: 50px;
     height: 50px;
-    -webkit-box-flex: 1;
-        -ms-flex-positive: 1;
-            flex-grow: 1;
+    position: absolute;
+    bottom: 33%;
+    left: 80px;
   }
 }
 
@@ -97,6 +100,9 @@
     -webkit-box-flex: 1;
         -ms-flex-positive: 1;
             flex-grow: 1;
+    position: absolute;
+    bottom: 33%;
+    left: 80px;
   }
 }
 
@@ -319,6 +325,7 @@
 
 @media screen and (min-width: 770px) {
   .navBar {
+    position: relative;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -326,13 +333,15 @@
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
             flex-direction: row;
-    -ms-flex-pack: distribute;
-        justify-content: space-around;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
     background-color: #376B95;
     height: 8em;
+    border-bottom: 1px solid lightgray;
   }
 }
 
@@ -362,6 +371,7 @@
 
 @media screen and (min-width: 770px) {
   .controlBar {
+    position: relative;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -369,7 +379,122 @@
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
             flex-direction: row;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    border-bottom: 1px solid lightgray;
   }
+  .hideShowBtn {
+    position: absolute;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    bottom: -50px;
+    left: 1%;
+    width: 180px;
+    height: 50px;
+    border: 1px solid lightgray;
+    border-radius: 0 0 10px 10px;
+    color: black;
+    -webkit-transition: 2s ease-out;
+    transition: 2s ease-out;
+  }
+  .hideShowBtn:hover > .hideShowImage {
+    -webkit-animation: spin 5s infinite ease-out;
+            animation: spin 5s infinite ease-out;
+  }
+  @-webkit-keyframes spin {
+    from {
+      -webkit-transform: rotate(0deg);
+              transform: rotate(0deg);
+    }
+    to {
+      -webkit-transform: rotate(360deg);
+              transform: rotate(360deg);
+    }
+  }
+  @keyframes spin {
+    from {
+      -webkit-transform: rotate(0deg);
+              transform: rotate(0deg);
+    }
+    to {
+      -webkit-transform: rotate(360deg);
+              transform: rotate(360deg);
+    }
+  }
+  .hideShowBtn:hover {
+    background-color: lightgray;
+  }
+  .hideShowBtn .hideShowImage {
+    width: 40px;
+  }
+  .allBtn {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    width: 120px;
+    height: 120px;
+    border-radius: 100px;
+    cursor: pointer;
+  }
+  .allBtn:hover > span {
+    -webkit-transition: 0.2s;
+    transition: 0.2s;
+    font-weight: bolder;
+  }
+  .allBtn:hover > img {
+    -webkit-animation: spin 5s infinite ease-out;
+            animation: spin 5s infinite ease-out;
+  }
+  @keyframes spin {
+    from {
+      -webkit-transform: rotate(0deg);
+              transform: rotate(0deg);
+    }
+    to {
+      -webkit-transform: rotate(360deg);
+              transform: rotate(360deg);
+    }
+  }
+  .allBtn img {
+    max-width: 50%;
+  }
+  .allBtn img:hover {
+    -webkit-transition: 2s;
+    transition: 2s;
+    -webkit-transform: scale(1.05);
+            transform: scale(1.05);
+  }
+  .allBtn span {
+    font-size: 0.8em;
+  }
+}
+
+.visible {
+  height: auto;
+}
+
+.invisible {
+  height: 0px;
 }
 
 .loadingContainer {
@@ -388,6 +513,8 @@
 .loadingContainer .spinnerImage {
   width: 300px;
   margin: auto;
+  -webkit-animation: spin 5s infinite ease-out;
+          animation: spin 5s infinite ease-out;
   -webkit-animation: spin 4s infinite linear;
           animation: spin 4s infinite linear;
 }
@@ -412,6 +539,14 @@
     -webkit-transform: rotate(360deg);
             transform: rotate(360deg);
   }
+}
+
+.pokeCardImage {
+  cursor: pointer;
+}
+
+.pokeCardType {
+  cursor: pointer;
 }
 
 @media screen and (max-width: 380px) {
@@ -600,12 +735,12 @@
   .pokeCard .pokeCardPokeball {
     position: absolute;
     width: 60px;
-    top: -30px;
-    right: -30px;
+    top: -40px;
+    right: -40px;
     -webkit-animation-name: pokeball;
             animation-name: pokeball;
-    -webkit-animation-duration: 2s;
-            animation-duration: 2s;
+    -webkit-animation-duration: 3s;
+            animation-duration: 3s;
   }
   @-webkit-keyframes pokeball {
     0% {
@@ -639,6 +774,7 @@
     max-width: 100%;
     max-height: 70%;
     margin-bottom: 40px;
+    cursor: pointer;
   }
   .pokeCard .pokeCardImage:hover {
     -webkit-transition: 3s;
@@ -678,6 +814,19 @@
     font-weight: bold;
     font-size: 1.5em;
   }
+}
+
+.specificPokemoncontainer {
+  height: calc(100vh - 200px);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 @media screen and (max-width: 380px) {
@@ -795,43 +944,43 @@
 }
 
 .normal {
-  background-color: lightpink;
+  background-color: rgba(250, 179, 190, 0.7);
 }
 
 .fighting {
-  background-color: rgba(123, 25, 192, 0.767);
+  background-color: rgba(123, 25, 192, 0.7);
 }
 
 .flying {
-  background-color: skyblue;
+  background-color: rgba(135, 206, 235, 0.7);
 }
 
 .poison {
-  background-color: darkolivegreen;
+  background-color: rgba(85, 107, 47, 0.7);
 }
 
 .ground {
-  background-color: burlywood;
+  background-color: rgba(222, 184, 135, 0.7);
 }
 
 .rock {
-  background-color: grey;
+  background-color: rgba(201, 124, 73, 0.7);
 }
 
 .steel {
-  background-color: lightslategray;
+  background-color: rgba(119, 136, 153, 0.7);
 }
 
 .fire {
-  background-color: red;
+  background-color: rgba(255, 0, 0, 0.7);
 }
 
 .water {
-  background-color: royalblue;
+  background-color: rgba(65, 105, 225, 0.7);
 }
 
 .electric {
-  background-color: yellow;
+  background-color: rgba(238, 241, 34, 0.7);
 }
 
 .psychic {
@@ -839,6 +988,38 @@
 }
 
 .grass {
-  background-color: lightgreen;
+  background-color: rgba(144, 238, 144, 0.699);
+}
+
+.ice {
+  background-color: rgba(93, 187, 182, 0.719);
+}
+
+.dragon {
+  background-color: rgba(211, 133, 44, 0.719);
+}
+
+.dark {
+  background-color: rgba(26, 25, 24, 0.719);
+}
+
+.bug {
+  background-color: rgba(50, 202, 70, 0.719);
+}
+
+.fairy {
+  background-color: rgba(185, 59, 189, 0.719);
+}
+
+.ghost {
+  background-color: rgba(94, 94, 94, 0.719);
+}
+
+.unknown {
+  background-color: rgba(94, 94, 94, 0.719);
+}
+
+.shadow {
+  background-color: rgba(94, 94, 94, 0.719);
 }
 /*# sourceMappingURL=styles.css.map */

@@ -1,8 +1,8 @@
 
 @include mediaQuery-phone{
     .controlBar{
-       display:flex;
-       flex-direction:row; 
+        display:flex;
+        flex-direction:row; 
     }
 }
 
@@ -10,12 +10,73 @@
     .controlBar{
         display:flex;
         flex-direction:row; 
-     }
+    }
 }
 
 @include mediaQuery-desktop{
     .controlBar{
+        position:relative;
         display:flex;
-        flex-direction:row; 
-     }
+        flex-direction: row;
+        justify-content: space-around;
+        border-bottom:1px solid lightgray;
+    }
+    .hideShowBtn{
+        position:absolute;
+        display:flex;
+        flex-direction:row;
+        justify-content: space-around;
+        align-items: center;
+        bottom:-50px;
+        left:1%;
+        width:180px;
+        height:50px;
+        border:1px solid lightgray;
+        border-radius: 0 0 10px 10px;
+        color:black;
+        transition:2s ease-out;
+        &:hover > .hideShowImage{
+            @include spinAnimation;
+        }
+        &:hover {
+            background-color: lightgray;
+        }
+        .hideShowImage{
+            width:40px;
+        }
+    }
+    .allBtn{
+        display:flex;
+        flex-direction:column;
+        justify-content: center;
+        align-items: center;
+        width:120px;
+        height:120px;
+        border-radius:100px;
+        cursor:pointer;
+        &:hover > span{
+            transition: 0.2s;
+            font-weight:bolder;
+        }
+        &:hover > img{
+            @include spinAnimation;
+        }
+        img{
+            max-width:50%;
+            &:hover{
+                transition:2s;
+                transform: scale(1.05);
+            }
+        }
+        span{
+            font-size:0.8em;
+        }
+    }
+}
+
+.visible{
+    height:auto;
+}
+.invisible{
+    height:0px;
 }

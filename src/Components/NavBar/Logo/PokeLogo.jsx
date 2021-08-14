@@ -1,5 +1,4 @@
 import React from 'react'
-import '../../../Styles/styles.css'
 import pokemonLogo from '../../../assets/images/pokemonLogo.png';
 
 const PokeLogo = () => {

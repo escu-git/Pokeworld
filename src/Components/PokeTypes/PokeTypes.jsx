@@ -1,7 +1,7 @@
 import React from 'react'
 import { NavLink } from 'react-router-dom';
 
-const PokeTypes = ({pokeData, clickHandler}) => {
+const PokeTypes = ({pokeData}) => {
     let pokeTypeColor = pokeData.name;
     return (
         <NavLink to={`/filtered-pokemons/${pokeData.name}`} style={{textDecoration:'none', color:'inherit'}}>

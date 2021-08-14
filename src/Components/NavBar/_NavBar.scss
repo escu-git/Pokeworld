@@ -21,11 +21,13 @@
 
 @include mediaQuery-desktop{
     .navBar{
+        position:relative;
         display:flex;
         flex-direction:row;
-        justify-content: space-around;
+        justify-content: center;
         align-items: center;
         background-color:#376B95;
         height:8em;
+        border-bottom:1px solid lightgray;
     }
 }
