@@ -3,7 +3,7 @@ import { useShowPokemon } from '../../../Contexts/PokeContext';
 import { useParams } from 'react-router';
 import Loading from '../../Loading/Loading';
 import PokeCard from '../../PokeCards/PokeCard';
-import fn from '../../../JavaScript/functions';
+import fn from '../../../Helpers/functions';
 
 const FilteredByType = () => {
     let {id} = useParams()

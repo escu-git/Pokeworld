@@ -1,7 +1,7 @@
 import React,{useState, useEffect} from 'react'
 import PokeTypes from '../../PokeTypes/PokeTypes'
 
-const PokemonTypes = () => {
+const PokemonTypes = ({show}) => {
     const[types, setTypes]=useState(null);
 
     const fetchTypes = async()=>{
@@ -24,9 +24,12 @@ const PokemonTypes = () => {
     },[])
     
     return (
+        <>{show?
         <div className='typeCardContainer'>
             {types?.map(type=>{return(<PokeTypes key={type.name} pokeData={type}/>)})}
         </div>
+        :null}
+        </>
     )
 }
 

@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { AutoComplete } from 'primereact/autocomplete';
 import { useHistory } from 'react-router';
-import fn from '../../JavaScript/functions';
+import fn from '../../Helpers/functions';
 import "primeicons/primeicons.css";
 import "primereact/resources/themes/saga-blue/theme.css";
 import "primereact/resources/primereact.css";
@@ -12,7 +12,7 @@ const SearchBar = () => {
     const [selectedPokemon, setSelectedPokemon] = useState(null);
     const [filteredPokemons, setFilteredPokemons] = useState(null);
     const history = useHistory();
-
+    
     useEffect(() => {
         fn.fetchAllPokemons(`pokemon?limit=898&offset=0`)
         .then(res=>{
@@ -23,7 +23,6 @@ const SearchBar = () => {
         })
     }, []); // eslint-disable-line react-hooks/exhaustive-deps
 
-    
     const searchPokemon = (event) => {
         setTimeout(() => {
             let _filteredPokemons;
@@ -35,6 +34,7 @@ const SearchBar = () => {
                     return x.name.toLowerCase().startsWith(event.query.toLowerCase());
                 });
                 console.log(_filteredPokemons)
+                
             }
             setFilteredPokemons(_filteredPokemons);
         }, 250);
@@ -46,7 +46,9 @@ const SearchBar = () => {
     
     const searchHandler = (pokemon) =>{
             history.push(`/search-pokemon/${pokemon}`)
+            setTimeout(()=>{
             setSelectedPokemon(null)
+            },10)
     }
 
     const itemTemplate = (item) => {
@@ -59,17 +61,17 @@ const SearchBar = () => {
         );
     }
     
-    
+    console.log(selectedPokemon)
     return (
         <div className="card">
-
             <h5>SEARCH OR SELECT POKEMON:</h5>
-            <AutoComplete value={selectedPokemon}
+            <AutoComplete
+            value={selectedPokemon}
             suggestions={filteredPokemons} 
             completeMethod={searchPokemon} 
             field="name" dropdown forceSelection 
             itemTemplate={itemTemplate}
-            onChange={(e) => setSelectedPokemon(e.value)} 
+            onChange={(e) =>setSelectedPokemon(e.value)} 
             onKeyPress={(e)=>{keyPressedHandler(e)}}
             />
         </div>
