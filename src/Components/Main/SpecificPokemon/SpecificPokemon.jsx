@@ -3,7 +3,7 @@ import { useParams } from 'react-router';
 import '../../../Styles/styles.css';
 import PokeCard from '../../PokeCards/PokeCard';
 import SearchBar from '../../Search/SearchBar';
-import fn from '../../../JavaScript/functions';
+import fn from '../../../Helpers/functions';
 const SpecificPokemon = () =>{
     const[pokemon, setPokemon] = useState(null)
     let {id} = useParams();

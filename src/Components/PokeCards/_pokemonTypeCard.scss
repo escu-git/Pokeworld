@@ -1,41 +1,41 @@
 .normal{
-    background-color:lightpink;
+    background-color:rgba(250, 179, 190, 0.7);
 }
 
 .fighting{
-    background-color: rgba(123, 25, 192, 0.767);
+    background-color: rgba(123, 25, 192, 0.7);
 }
 
 .flying{
-    background-color: skyblue;
+    background-color: rgba(135, 206, 235,0.7);
 }
 
 .poison{
-    background-color: darkolivegreen;
+    background-color: rgba(85, 107, 47, 0.7);
 }
 
 .ground{
-    background-color: burlywood;
+    background-color: rgba(222, 184, 135, 0.7);
 }
 
 .rock{
-    background-color: grey;
+    background-color: rgba(201, 124, 73, 0.7);
 }
 
 .steel{
-    background-color: lightslategray;
+    background-color: rgba(119, 136, 153, 0.7);
 }
 
 .fire{
-    background-color: red;
+    background-color: rgba(255, 0, 0, 0.7);
 }
 
 .water{
-    background-color:royalblue;
+    background-color:rgba(65, 105, 225, 0.7);
 }
 
 .electric{
-    background-color: yellow;
+    background-color: rgba(238, 241, 34, 0.7);
 }
 
 .psychic{
@@ -43,5 +43,36 @@
 }
 
 .grass{
-    background-color: lightgreen;
+    background-color: rgba(144, 238, 144, 0.699);
+}
+
+.ice{
+    background-color: rgba(93, 187, 182, 0.719);
+}
+
+.dragon{
+    background-color: rgba(211, 133, 44, 0.719);
+}
+.dark{
+    background-color: rgba(26, 25, 24, 0.719);
+}
+
+.bug{
+    background-color: rgba(50, 202, 70, 0.719);
+}
+
+.fairy{
+    background-color: rgba(185, 59, 189, 0.719);
+}
+
+.ghost{
+    background-color: rgba(94, 94, 94, 0.719);
+}
+
+.unknown{
+    background-color: rgba(94, 94, 94, 0.719);
+}
+
+.shadow{
+    background-color: rgba(94, 94, 94, 0.719);
 }
