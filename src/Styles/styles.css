@@ -510,10 +510,10 @@
 }
 
 .loadingContainer .spinnerImage {
+  -webkit-animation: spin 5s infinite linear;
+          animation: spin 5s infinite linear;
   width: 300px;
   margin: auto;
-  -webkit-animation: spin 4s infinite linear;
-          animation: spin 4s infinite linear;
 }
 
 @-webkit-keyframes spin {

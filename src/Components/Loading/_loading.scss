@@ -4,12 +4,8 @@ justify-content:center;
 align-items: center;
 margin:200px;
     .spinnerImage{
+        @include spinAnimation;
         width:300px;
         margin:auto;
-        animation: spin 4s infinite linear;
-        @keyframes spin {
-            from {transform:rotate(0deg);}
-            to {transform:rotate(360deg);}
-        }
     }
 }
