@@ -339,8 +339,9 @@
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    background-color: #376B95;
+    background: radial-gradient(#376b95d3, #0f3352e8);
     height: 8em;
+    border-bottom: 1px solid lightgray;
   }
 }
 

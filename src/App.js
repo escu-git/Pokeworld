@@ -7,6 +7,7 @@ import AllPokemons from './Components/Main/PokemonList/AllPokemons';
 import ControlBar from './Components/ControlBar/ControlBar';
 import FilteredByType from './Components/Main/FilteredByType/FilteredByType';
 import  {PokemonTypeProvider}  from './Contexts/PokeContext';
+import Random from './Components/Random/Random';
 
 function App() {
   return (
@@ -17,7 +18,7 @@ function App() {
         <ControlBar/>
         <Switch>
           <Route exact path ='/'>
-          <Loading/>
+          <Random/>
           </Route>
           <Route exact path ='/search-pokemon/:id'>
             <SpecificPokemon/>
